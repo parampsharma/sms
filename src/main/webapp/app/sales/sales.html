@@ -1,0 +1,48 @@
+
+<div>
+   
+    <div class="panel-heading" style="background: #31C0BE; color: white;">
+    <div class="row">
+      <div class="col-md-12">
+          <button class="btn btn-primary" ui-sref="sales-management.new" style="float: right;">
+              <span class="glyphicon glyphicon-plus-sign"></span> <span data-translate="site.addsite">Add site</span>
+          </button>
+      </div>
+    </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead style="background-color: #91E3E2; color: black;">
+            <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                <th jh-sort-by="siteName"><span data-translate="site.siteName">Site name</span><span class="glyphicon glyphicon-sort"></span></th>
+                <th jh-sort-by="siteIpAddress"><span data-translate="site.ipAddress">IP Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                <th jh-sort-by="siteId"><span data-translate="site.siteId">Site ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                <th><span data-translate="site.action">Action</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="site in vm.sites track by $index">
+                <td>{{site.siteName}}</td>
+                <td>{{site.siteIpAddress}}</td>
+               <td>{{site.siteId}}</td> 
+              <td><button type="submit" 
+                                 ui-sref="site-management.edit({id:site.id})" 
+                                 class="btn btn-primary btn-sm"> 
+                             <span class="glyphicon glyphicon-pencil"></span> 
+                            <span class="hidden-xs hidden-sm" data-translate="site.edit"></span> 
+                        </button> 
+                        <button type="submit" 
+                                 ui-sref="site-management.delete({id:site.id})" 
+                                 class="btn btn-danger btn-sm"> 
+                           <span class="glyphicon glyphicon-remove-circle"></span> 
+                         <span class="hidden-xs hidden-sm" data-translate="site.delete"></span> 
+                       </button></td> 
+          </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>
