@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.pps.sms.domain.Sales;
 import com.pps.sms.repository.SalesRepository;
 import com.pps.sms.service.dto.SalesDTO;
@@ -28,7 +27,7 @@ public class SalesService {
     	
     	try{
         Sales newSite = new Sales();
-        newSite.setProductCode(salesDTO.getProductCode());
+        //newSite.setProductCode(salesDTO.getProductCode());
         newSite.setProductName(salesDTO.getProductName());
         newSite.setId(salesDTO.getId());
         newSite = salesRepository.save(newSite);

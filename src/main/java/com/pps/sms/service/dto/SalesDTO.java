@@ -29,6 +29,8 @@ public class SalesDTO extends AbstractAuditingEntity {
     	this.id = id;
         this.createdDate = createdDate;
         this.createdBy = createdBy;
+        this.productCode =productCode;
+        this.productName = productName;
         
     }
 

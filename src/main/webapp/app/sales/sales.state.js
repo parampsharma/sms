@@ -43,15 +43,8 @@
 					resolve: {
 						entity: function () {
 							 return {
-	                                siteName: null,
-	                                siteIpAddress: null,
-	                                siteId: null,
-	                                ftpUserName: null,
-	                                ftpPasswrod: null,
-	                                ftpPath: null, 
-	                                ftpPathDrop: null,
-	                                kisFile: null,
-	                            };
+								 productName: null,
+	                               	                            };
 						}
 					}
 				}

@@ -27,34 +27,37 @@
 				<!-- Text input-->
 				<div class="form-group">
 					<label class="col-md-4 control-label required" for="name"
-						data-translate="site.siteName">Site Name</label>
+						data-translate="site.productName">Site Name</label>
 					<div class="col-md-4">
-						<input id="name" name="name" type="text"
-							placeholder="{{'site.siteName' | translate}}"
-							class="form-control input-md" required
-							ng-model="vm.site.siteName"
+						<input id="name" name="name" type="text">
+							<!-- class="form-control input-md" required
+							ng-model="vm.site.productName"
 							ng-blur="vm.validateSiteName(vm.site.siteName,'siteName',vm.site.id)"
-							ng-change="vm.changingSiteName(vm.site.siteName,'siteName',vm.site.id)">
+							ng-change="vm.changingSiteName(vm.site.siteName,'siteName',vm.site.id)" -->
+							
+						
 
 					</div>
 				</div>
 
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label class="col-md-4 control-label required" for="siteip"
 						data-translate="site.ipAddress">Site IP address</label>
 					<div class="col-md-4">
 						<input id="siteip" name="siteip" type="text"
 							
 							class="form-control input-md" required
-							ng-model="vm.site.siteIpAddress"
+							ng-model="vm.site.productCode"
 							ng-pattern='/^([0-9]{1,3})[.]([0-9]{1,3})[.]([0-9]{1,3})[.]([0-9]{1,3})$/'
 							ng-blur="vm.validateSiteName(vm.site.siteIpAddress,'siteIpAddress',vm.site.id)"
-							ng-change="vm.changingSiteName(vm.site.siteIpAddress, 'siteIpAddress')" />
+							ng-change="vm.changingSiteName(vm.site.siteIpAddress, 'siteIpAddress')" 
+							
+							/>
 
 					</div>
 				</div>
-
-				<div class="form-group">
+ -->
+				<!-- <div class="form-group">
 					<label class="col-md-4 control-label required" for="siteId"
 						data-translate="site.siteId">Site ID</label>
 					<div class="col-md-4">
@@ -66,65 +69,17 @@
 
 					</div>
 				</div>
-
-				<div class="form-group">
-					<label class="col-md-4 control-label required" for="ftpUser"
-						data-translate="site.ftpUname">FTP username</label>
-					<div class="col-md-4">
-						<input id="ftpUser" name="ftpUser" type="text"
-							
-							class="form-control input-md" required
-							ng-model="vm.site.ftpUserName">
-
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label class="col-md-4 control-label required" for="ftpPass"
-						data-translate="site.ftpPass">FTP password</label>
-					<div class="col-md-4">
-						<input id="ftpPass" name="ftpPass" type="password"
-							
-							class="form-control input-md" required
-							ng-model="vm.site.ftpPasswrod">
-
-					</div>
-				</div>
+ -->
+				
 
 
-				<div class="form-group">
-					<label class="col-md-4 control-label required" for="ftpPath"
-						data-translate="site.ftpPath">FTP path</label>
-					<div class="col-md-4">
-						<input id="ftpPath" name="ftpPath" type="text"
-							
-							class="form-control input-md" required ng-model="vm.site.ftpPath">
 
-					</div>
-				</div>
 
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="pathdrop"
-						data-translate="site.ftpDrop">FTP path for droping KIS
-						file</label>
-					<div class="col-md-4">
-						<input id="pathdrop" name="pathdrop" type="text"
-							
-							class="form-control input-md" ng-model="vm.site.ftpPathDrop">
+				
 
-					</div>
-				</div>
 
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="kisfile"
-						data-translate="site.kisFile">KIS file ws IP address</label>
-					<div class="col-md-4">
-						<input id="kisfile" name="kisfile" type="text"
-							
-							class="form-control input-md" ng-model="vm.site.kisFile">
 
-					</div>
-				</div>
+
 			</div>
 		</fieldset>
 	</form>
